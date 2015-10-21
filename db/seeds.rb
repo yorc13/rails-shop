@@ -30,3 +30,5 @@ copy_image_fixture(fixtures_path.join('hdd.jpg'), hdd.id)
 
 mb = Product.create(title: 'Asus P5Q3', price: 120, category: motherboards_category)
 copy_image_fixture(fixtures_path.join('mb.jpg'), mb.id)
+
+user = User.create(name: 'John Doe', email: 'johndoe@example.com', password: '12345678', password_confirmation: '12345678')
