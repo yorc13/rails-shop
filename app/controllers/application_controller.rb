@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:account_update) << :name
   end
+
+  def admin_user
+    unless current_user.admin?
+      flash[:danger] = "You don't have enough permissions"
+      redirect_to root_url
+    end
+  end
 end
