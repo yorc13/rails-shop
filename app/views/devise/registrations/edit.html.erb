@@ -2,7 +2,6 @@
 <hr/>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
-  <%= devise_error_messages! %>
 
   <div class="form-group <%= 'has-error' if resource.errors[:name].any? %>">
     <%= f.label :name, class: 'col-sm-2 control-label' %>
