@@ -5,6 +5,6 @@ class Product < ActiveRecord::Base
             length: { maximum: 250 }
 
   validates :price, presence: true,
-            numericality: { greater_than: 0 }
+            numericality: { greater_than_or_equal_to: 0.01 }
 
 end
